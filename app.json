@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "sdkVersion": "21.0.0",
+    "orientation": "portrait",
+    "name": "Boilerplate",
+    "description": "boilerplate react native app",
+    "slug": "boilerplate",
+    "version": "1.0",
+    "icon": "",
+    "notification": {
+      "icon": ""
+    },
+    "ios": {
+      "bundleIdentifier": "org.flashcards.exp"
+    },
+    "android": {
+      "package": "org.flashcards.exp"
+    }
+  }
+}
