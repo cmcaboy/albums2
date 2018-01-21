@@ -5,46 +5,15 @@ import { purple, white } from '../utils/colors';
 import BlankComponent from '../components/BlankComponent';
 import BlankComponent2 from '../components/BlankComponent2';
 import { View, Platform, StatusBar, Text } from 'react-native';
-
-const Tabs = TabNavigator({
-     Decks: {
-       screen: BlankComponent,
-       navigationOptions: {
-         tabBarLabel: 'Decks',
-         tabBarIcon: ({ tintColor }) => <Ionicons name='ios-bookmarks' size={30} color={tintColor} />
-       }
-     },
-     NewDeck: {
-       screen: BlankComponent2,
-       navigationOptions: {
-         tabBarLabel: 'New Deck',
-         tabBarIcon: ({ tintColor }) => <FontAwesome name='plus-square' size={30} color={tintColor} />
-       }
-     }
-   }, {
-     navigationOptions: {
-       header: null
-     },
-     tabBarOptions: {
-       activeTintColor: Platform.OS === 'ios' ? purple : white,
-       style: {
-         height: 56,
-         backgroundColor: Platform.OS === 'ios' ? white : purple,
-         shadowColor: 'rgba(0, 0, 0, 0.24)',
-         shadowOffset: {
-           width: 0,
-           height: 3
-         },
-         shadowRadius: 6,
-         shadowOpacity: 1
-       }
-     }
-   })
-
+import AlbumDetail from '../components/AlbumDetail';
+import AlbumsList from '../components/AlbumsList';
 
 const MainNavigator = StackNavigator({
      Home: {
-       screen: Tabs
+       screen: AlbumsList
+     },
+     Detail: {
+       screen: AlbumDetail
      }
 });
   

@@ -10,7 +10,7 @@ class BlankComponent extends Component {
 
         return (
             <View style={styles.list}>
-                <Text>Hello World</Text>
+                <Text>Hello World...</Text>
             </View>
         )
     }
